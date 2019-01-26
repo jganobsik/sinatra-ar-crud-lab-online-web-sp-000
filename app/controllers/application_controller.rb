@@ -23,8 +23,11 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/articles' do
-      @articles = Article.all
+      @articles = Article.create(params)
 
-  erb :index
+  erb :show
 end
+
+
+
 end
