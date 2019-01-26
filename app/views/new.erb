@@ -1,9 +1,13 @@
 <form action='/articles' method="POST">
   <h2>Article</h2>
-  <label for="article_title">Title</label><br>
-  <input id="article_title" type="text" name="article[title]" /><br>
-  <label for="article_content">Content</label><br>
-  <input id="article_content" type="text" name="article[content]" /><br>
-  
+  label for="title">Title</label>
+      <input id="title" type="text" name="title" />
+    </li>
+    <li>
+      <label for="content">Content</label>
+      <textarea id="content" type="text" name="content">
+      </textarea>
+    </li>
+  </ul>
   <input type="submit" value="Submit">
 </form>
