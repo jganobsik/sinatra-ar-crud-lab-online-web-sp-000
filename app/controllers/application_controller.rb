@@ -35,5 +35,21 @@ get "/articles/:id" do
     erb :show
   end
   
+  get "/articles/:id/edit" do
+    @article = Article.find(params[:id])
+    erb :edit
+  end
+
   
+  patch "/articles/:id" do
+    @article = Article.find(params[:id])
+    @article.update(params[:article])
+    redirect to "/articles/#{ @article.id }"
+  end
+
+  
+  delete "/articles/:id" do
+    Article.destroy(params[:id])
+    redirect to "/articles"
+  end
 end
